@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SalonMobile.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:models="clr-namespace:SalonMobile.Models"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
+    xmlns:viewModels="clr-namespace:SalonMobile.ViewModels"
+    iOS:Page.UseSafeArea="True"
+    sharedTransitions:SharedTransitionNavigationPage.BackgroundAnimation="Fade"
+    sharedTransitions:SharedTransitionNavigationPage.TransitionDuration="500"
+    sharedTransitions:SharedTransitionNavigationPage.TransitionSelectedGroup="{Binding SelectedSalonId}"
+    NavigationPage.HasNavigationBar="False">
+
+    <NavigationPage.TitleView>
+        <Label
+            FontAttributes="Bold"
+            FontSize="Large"
+            HorizontalTextAlignment="Center"
+            Text="Salon Mobile"
+            TextColor="White" />
+    </NavigationPage.TitleView>
+
+
+    <Grid x:DataType="viewModels:MainPageViewModel">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <BoxView
+            Grid.Row="0"
+            BackgroundColor="{StaticResource colorPrimary}"
+            HeightRequest="50" />
+
+        <pancake:PancakeView
+            Grid.Row="1"
+            Margin="0,-25,0,0"
+            Padding="0"
+            BackgroundColor="White"
+            CornerRadius="20,20,0,0">
+
+            <Grid Margin="20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    Margin="20"
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    Text="Hair Stylist"
+                    TextColor="{StaticResource colorPrimary}" />
+
+                <CollectionView
+                    x:Name="collection"
+                    Grid.Row="1"
+                    ItemsSource="{Binding Salons}"
+                    SelectionMode="None">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout ItemSpacing="15" Orientation="Vertical" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <pancake:PancakeView
+                                Margin="20,0"
+                                x:DataType="models:Salon"
+                                BackgroundColor="{Binding BgColor}"
+                                CornerRadius="20">
+                                <Grid>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Style="{StaticResource lblClient}"
+                                        Text="{Binding Client}" />
+
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Style="{StaticResource lblSalonName}"
+                                        Text="{Binding SalonName}" />
+
+                                    <StackLayout
+                                        Grid.Row="2"
+                                        Grid.Column="0"
+                                        Margin="20,0,0,0"
+                                        Orientation="Horizontal">
+                                        <Image Source="star" />
+                                        <Label Style="{StaticResource lblRanking}" Text="{Binding Ranking}" />
+                                    </StackLayout>
+
+                                    <Button
+                                        Grid.Row="3"
+                                        Margin="20,30,0,0"
+                                        BackgroundColor="{StaticResource colorPrimary}"
+                                        Command="{Binding Path=BindingContext.SalonCommand, Source={x:Reference Name=collection}}"
+                                        CommandParameter="{Binding .}"
+                                        CornerRadius="20"
+                                        FontSize="Micro"
+                                        Text="View Profile"
+                                        TextColor="White"
+                                        VerticalOptions="End" />
+
+                                    <Image
+                                        Grid.RowSpan="4"
+                                        Grid.Column="1"
+                                        Margin="0,0,0,-18"
+                                        sharedTransitions:Transition.Group="{Binding Id}"
+                                        sharedTransitions:Transition.Name="SelectedImage"
+                                        Aspect="AspectFit"
+                                        HorizontalOptions="End"
+                                        Source="{Binding Img}"
+                                        VerticalOptions="End" />
+
+                                </Grid>
+                            </pancake:PancakeView>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </Grid>
+
+        </pancake:PancakeView>
+
+    </Grid>
+
+</ContentPage>

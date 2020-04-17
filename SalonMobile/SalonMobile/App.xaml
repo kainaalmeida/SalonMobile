@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication
+    x:Class="SalonMobile.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms">
+    <Application.Resources>
+
+        <Color x:Key="colorPrimary">#4E295B</Color>
+
+        <!--  Style Base  -->
+
+        <Style x:Key="lblClient" TargetType="Label">
+            <Setter Property="Margin" Value="20,20,0,0" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="{StaticResource colorPrimary}" />
+        </Style>
+
+        <Style x:Key="lblSalonName" TargetType="Label">
+            <Setter Property="Margin" Value="20,0,0,0" />
+            <Setter Property="FontSize" Value="Small" />
+            <Setter Property="TextColor" Value="{StaticResource colorPrimary}" />
+        </Style>
+
+        <Style x:Key="lblRanking" TargetType="Label">
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="Small" />
+            <Setter Property="TextColor" Value="{StaticResource colorPrimary}" />
+        </Style>
+
+        <!--  Style Base  -->
+
+        <!--  Style Detail Page  -->
+
+
+
+        <!--  Style Detail Page  -->
+    </Application.Resources>
+</prism:PrismApplication>
