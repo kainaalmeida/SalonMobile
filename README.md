@@ -1,3 +1,16 @@
+# Créditos ao designer 
+
+[nickelfox.com/contact](https://dribbble.com/shots/10946405-Salon-Booking-App-Free)
+
+## Desenvolvimento
+
+[Prism](https://prismlibrary.com/docs/xamarin-forms/Getting-Started.html)
+
+[Shared Transitions](https://github.com/GiampaoloGabba/Xamarin.Plugin.SharedTransitions)
+
+
+
+
 # Gifs
 
 <table>
