@@ -2,7 +2,7 @@
 
 <table>
   <thead>
-    <th>Adnroid</th>
+    <th>Android</th>
     <th>iOS</th>
   </thead>
   <tbody>
