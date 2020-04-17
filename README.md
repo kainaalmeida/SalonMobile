@@ -8,6 +8,8 @@
 
 [Shared Transitions](https://github.com/GiampaoloGabba/Xamarin.Plugin.SharedTransitions)
 
+[PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView)
+
 
 
 
