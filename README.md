@@ -1,8 +1,5 @@
 # Gifs
 
-## Screenshots
-
-
 <table>
   <thead>
     <th>Adnroid</th>
