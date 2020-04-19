@@ -11,7 +11,32 @@
 [PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView)
 
 
-
+# ScreenShots
+## Android
+<table>
+  <thead>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://github.com/kainaalmeida/SalonMobile/blob/master/screenshots/droid01.jpg"/></td>
+      <td><img src="https://github.com/kainaalmeida/SalonMobile/blob/master/screenshots/droid02.jpg"/></td>
+    </tr>
+  </tbody>
+ </table>
+ 
+ ## iOS
+<table>
+  <thead>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://github.com/kainaalmeida/SalonMobile/blob/master/screenshots/iOS01.png"/></td>
+      <td><img src="https://github.com/kainaalmeida/SalonMobile/blob/master/screenshots/iOS02.png"/></td>
+    </tr>
+  </tbody>
+ </table>
 
 # Gifs
 
