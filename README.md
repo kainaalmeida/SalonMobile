@@ -1,3 +1,5 @@
+<img src="https://user-images.githubusercontent.com/11803107/79746139-e20c5b80-82df-11ea-8039-21680c5b9e35.jpg" width="220" height="60">
+
 # Créditos ao designer 
 
 [nickelfox.com/contact](https://dribbble.com/shots/10946405-Salon-Booking-App-Free)
